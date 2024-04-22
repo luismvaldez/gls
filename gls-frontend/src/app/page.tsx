@@ -47,7 +47,6 @@ export default function RepositoryAnalyticsPage() {
         const data = await fetchTopStarredRepositories();
         setTopRepositories(data.items);
       } catch (error) {
-        console.error('Error fetching top repositories:', error);
         setTopReposError('Failed to fetch top repositories. Please try again later.');
       }
       setIsTopReposLoading(false);
@@ -68,7 +67,11 @@ export default function RepositoryAnalyticsPage() {
       ]);
       setRepositoryData({
         ...repoData,
-        commitActivity: activityData
+        commitActivity: activityData,
+        latestCommit: {
+          ...repoData.latestCommit?.commit,
+          author: repoData.latestCommit?.author,
+        },
       });
     } catch (error) {
       setError('Failed to fetch repository data. Please check the URL and try again.');
