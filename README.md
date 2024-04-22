@@ -1,7 +1,9 @@
 # GitHub Repository Analytics
 
 Welcome to the GitHub Repository Analytics project! This project provides a web application that allows you to gain insights and analytics about GitHub repositories. With this application, you can easily search for a GitHub repository by entering its URL and obtain valuable information about it. Additionally, you can discover the top starred repositories on GitHub at the moment.
-![Demo](https://github.com/luismvaldez/gls/main/demo.gif)
+
+![Demo](https://github.com/luismvaldez/gls/blob/main/demo.gif?raw=true)
+
 ## Features
 
 - **Repository Analytics**: Enter the URL of a GitHub repository in the search box, and the application will provide you with detailed analytics about that repository. Gain insights into various metrics and statistics to understand the repository's popularity, activity, and contributions.
