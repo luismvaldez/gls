@@ -30,6 +30,9 @@ export default function RepositoryAnalyticsPage() {
     topContributors: [],
     latestCommit: {
       message: "",
+      committer: {
+        date: "",
+      },
       author: {
         date: "",
         avatar_url: "",
