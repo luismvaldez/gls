@@ -108,7 +108,7 @@ export default function RepositoryAnalyticsPage() {
           <motion.div variants={cardVariants}>
             <Card>
               <CardHeader>
-                <CardTitle>Top 5 Starred GitHub Repositories</CardTitle>
+                <CardTitle>Top 10 Starred GitHub Repositories</CardTitle>
               </CardHeader>
               <CardContent>
                 {topReposError && (

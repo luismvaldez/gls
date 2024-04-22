@@ -1,3 +1,5 @@
+import { Commit } from "@/shared/commit";
+
 export type RepositoryData = {
     name: string;
     description: string;
@@ -5,13 +7,7 @@ export type RepositoryData = {
     forks_count: number;
     open_issues_count: number;
     size: number;
-    latestCommit: {
-        message: string;
-        author: {
-            avatar_url: string;
-            date: string;
-        };
-    };
+    latestCommit: Commit;
     topContributors: {
         id: number;
         login: string;

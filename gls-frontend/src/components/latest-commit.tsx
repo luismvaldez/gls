@@ -1,20 +1,11 @@
+import { Commit } from '@/shared/commit';
 import React from 'react';
 
 type LatestCommitProps = {
-  latestCommit: {
-    message: string;
-    committer: {
-      date: string;
-    };
-    author: {
-      avatar_url: string;
-      date: string;
-    };
-  };
+  latestCommit: Commit;
 };
 
 const LatestCommit: React.FC<LatestCommitProps> = ({ latestCommit }) => {
-  console.log(latestCommit);
   const truncateMessage = (message: string, maxLength: number) => {
     if (message.length <= maxLength) {
       return message;
