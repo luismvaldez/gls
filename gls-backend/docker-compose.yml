@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  gls-backend:
+    build: ./gls-backend
+    volumes:
+      - ./gls-backend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5001:5000"
+    networks:
+      - gls-network
+
+networks:
+  gls-network:
+    driver: bridge
