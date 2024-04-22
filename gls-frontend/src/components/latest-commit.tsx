@@ -3,6 +3,9 @@ import React from 'react';
 type LatestCommitProps = {
   latestCommit: {
     message: string;
+    committer: {
+      date: string;
+    };
     author: {
       avatar_url: string;
       date: string;
@@ -11,6 +14,7 @@ type LatestCommitProps = {
 };
 
 const LatestCommit: React.FC<LatestCommitProps> = ({ latestCommit }) => {
+  console.log(latestCommit);
   const truncateMessage = (message: string, maxLength: number) => {
     if (message.length <= maxLength) {
       return message;
@@ -29,7 +33,7 @@ const LatestCommit: React.FC<LatestCommitProps> = ({ latestCommit }) => {
         />
         <div>
           <p className="text-base">{truncateMessage(latestCommit.message, 50)}</p>
-          <p className="text-sm text-gray-500">{latestCommit.author.date}</p>
+          <p className="text-sm text-gray-500">{latestCommit.committer.date}</p>
         </div>
       </div>
     </div>
