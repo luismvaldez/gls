@@ -6,10 +6,7 @@ export class GithubController {
   constructor(private readonly githubService: GithubService) {}
 
   @Get('stats')
-  getRepoStats(
-    @Query('owner') owner: string,
-    @Query('repo') repo: string,
-  ): Promise<any> {
+  getRepoStats(@Query('owner') owner: string, @Query('repo') repo: string) {
     return this.githubService.getRepositoryStats(owner, repo);
   }
 
@@ -17,12 +14,12 @@ export class GithubController {
   getCommitActivity(
     @Query('owner') owner: string,
     @Query('repo') repo: string,
-  ): Promise<any> {
+  ) {
     return this.githubService.getWeeklyCommitActivity(owner, repo);
   }
 
   @Get('top/starred')
-  getTopStarredRepos(): Promise<any> {
+  getTopStarredRepos() {
     return this.githubService.getTopStarredRepos();
   }
 }
